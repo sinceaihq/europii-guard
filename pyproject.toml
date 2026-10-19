@@ -60,6 +60,7 @@ explicit-preview-rules = true
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S", "N802", "E501"]
+"scripts/*" = ["E501"]  # report templates and CLI one-liners
 "src/europii/detectors.py" = ["E501"]
 "src/europii/bench/templates.py" = ["E501"]
 "src/europii/bench/identities.py" = ["E501"]

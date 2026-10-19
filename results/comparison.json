@@ -1,0 +1,3382 @@
+{
+  "data": "../data/europii/v0.1/test.jsonl",
+  "messages": 2075,
+  "europii_version": "0.1.0",
+  "python": "3.13.5",
+  "systems": {
+    "presidio_default": {
+      "structured": {
+        "micro": {
+          "precision": 0.9122632103688934,
+          "recall": 0.472258064516129,
+          "f1": 0.622343138921952
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.16891891891891891,
+            "recall": 0.027777777777777776,
+            "f1": 0.04770992366412213,
+            "n_gold": 900,
+            "n_pred": 148,
+            "exact_recall": 0.027777777777777776
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9259259259259259,
+            "recall": 1.0,
+            "f1": 0.9615384615384615,
+            "n_gold": 300,
+            "n_pred": 324,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "n_gold": 300,
+            "n_pred": 0,
+            "exact_recall": 0.0
+          },
+          "NATIONAL_ID": {
+            "precision": 0.14705882352941177,
+            "recall": 0.005714285714285714,
+            "f1": 0.011001100110011,
+            "n_gold": 875,
+            "n_pred": 34,
+            "exact_recall": 0.005714285714285714
+          }
+        },
+        "coverage": 0.5956129032258064,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.0033333333333333335,
+          "DATE": 0.0,
+          "EAN": 0.013333333333333334,
+          "INVOICE": 0.002857142857142857,
+          "ORDER": 0.07,
+          "POSTCODE": 0.0
+        },
+        "negatives_flagged_overall": 0.010303030303030303,
+        "recall_by_language": {
+          "cs": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "da": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.1,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "de": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "en": {
+            "PHONE": 0.3333333333333333,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "es": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "fi": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "fr": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "it": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "nl": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "pl": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "pt": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "sv": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 0.0,
+          "be_national_number": 0.0,
+          "bg_egn": 0.0,
+          "cz_rodne_cislo": 0.0,
+          "de_steuer_id": 0.0,
+          "dk_cpr": 0.1,
+          "ee_isikukood": 0.0,
+          "es_dni": 0.0,
+          "es_nie": 0.0,
+          "fi_hetu": 0.0,
+          "fr_nir": 0.0,
+          "hr_oib": 0.0,
+          "ie_ppsn": 0.0,
+          "it_codice_fiscale": 0.0,
+          "lt_asmens_kodas": 0.0,
+          "lv_personas_kods": 0.0,
+          "nl_bsn": 0.0,
+          "no_fodselsnummer": 0.0,
+          "pl_pesel": 0.0,
+          "pt_cc": 0.0,
+          "ro_cnp": 0.0,
+          "se_personnummer": 0.0,
+          "si_emso": 0.0,
+          "sk_rodne_cislo": 0.0
+        },
+        "recall_by_template": {
+          "0": 0.5,
+          "1": 0.5066666666666667,
+          "2": 1.0,
+          "3": 1.0,
+          "4": 0.041666666666666664,
+          "5": 0.33444444444444443,
+          "foreign-0": 0.0
+        },
+        "other_labels": {
+          "PERSON": 2819,
+          "DATE_TIME": 2491,
+          "URL": 1106,
+          "NRP": 340,
+          "LOCATION": 223,
+          "MEDICAL_LICENSE": 21
+        }
+      },
+      "person": {
+        "micro": {
+          "precision": 0.5654487406881873,
+          "recall": 0.8963380281690141,
+          "f1": 0.6934434215126122
+        },
+        "labels": {
+          "PERSON": {
+            "precision": 0.5654487406881873,
+            "recall": 0.8963380281690141,
+            "f1": 0.6934434215126122,
+            "n_gold": 1775,
+            "n_pred": 2819,
+            "exact_recall": 0.6805633802816902
+          }
+        },
+        "coverage": 0.8952112676056339,
+        "negatives_flagged": {
+          "AMOUNT": 0.0112,
+          "BAD_ID": 0.07333333333333333,
+          "DATE": 0.04975609756097561,
+          "EAN": 0.13,
+          "INVOICE": 0.037142857142857144,
+          "ORDER": 0.07,
+          "POSTCODE": 0.07666666666666666
+        },
+        "negatives_flagged_overall": 0.05545454545454546,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.8
+          },
+          "da": {
+            "PERSON": 0.872
+          },
+          "de": {
+            "PERSON": 1.0
+          },
+          "en": {
+            "PERSON": 0.9275
+          },
+          "es": {
+            "PERSON": 0.864
+          },
+          "fi": {
+            "PERSON": 0.784
+          },
+          "fr": {
+            "PERSON": 0.72
+          },
+          "it": {
+            "PERSON": 0.848
+          },
+          "nl": {
+            "PERSON": 0.896
+          },
+          "pl": {
+            "PERSON": 0.976
+          },
+          "pt": {
+            "PERSON": 1.0
+          },
+          "sv": {
+            "PERSON": 1.0
+          }
+        },
+        "recall_by_detector": {},
+        "recall_by_template": {
+          "0": 0.95,
+          "1": 0.93,
+          "2": 0.9333333333333333,
+          "4": 0.69,
+          "5": 0.92,
+          "foreign-0": 0.96
+        },
+        "other_labels": {
+          "EMAIL": 900,
+          "DATE_TIME": 2491,
+          "URL": 1106,
+          "NATIONAL_ID": 34,
+          "IBAN": 300,
+          "PAYMENT_CARD": 324,
+          "IP_ADDRESS": 300,
+          "NRP": 340,
+          "PHONE": 148,
+          "LOCATION": 223,
+          "MEDICAL_LICENSE": 21
+        }
+      },
+      "all": {
+        "micro": {
+          "precision": 0.7096373056994819,
+          "recall": 0.6054867256637169,
+          "f1": 0.6534379395248653
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.16891891891891891,
+            "recall": 0.027777777777777776,
+            "f1": 0.04770992366412213,
+            "n_gold": 900,
+            "n_pred": 148,
+            "exact_recall": 0.027777777777777776
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9259259259259259,
+            "recall": 1.0,
+            "f1": 0.9615384615384615,
+            "n_gold": 300,
+            "n_pred": 324,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "n_gold": 300,
+            "n_pred": 0,
+            "exact_recall": 0.0
+          },
+          "NATIONAL_ID": {
+            "precision": 0.14705882352941177,
+            "recall": 0.005714285714285714,
+            "f1": 0.011001100110011,
+            "n_gold": 875,
+            "n_pred": 34,
+            "exact_recall": 0.005714285714285714
+          },
+          "PERSON": {
+            "precision": 0.5654487406881873,
+            "recall": 0.8963380281690141,
+            "f1": 0.6934434215126122,
+            "n_gold": 1775,
+            "n_pred": 2819,
+            "exact_recall": 0.6805633802816902
+          }
+        },
+        "coverage": 0.6897345132743363,
+        "negatives_flagged": {
+          "AMOUNT": 0.0112,
+          "BAD_ID": 0.07333333333333333,
+          "DATE": 0.04975609756097561,
+          "EAN": 0.14333333333333334,
+          "INVOICE": 0.04,
+          "ORDER": 0.1375,
+          "POSTCODE": 0.07666666666666666
+        },
+        "negatives_flagged_overall": 0.06515151515151515,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.8,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "da": {
+            "PERSON": 0.872,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.1,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "de": {
+            "PERSON": 1.0,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "en": {
+            "PERSON": 0.9275,
+            "PHONE": 0.3333333333333333,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "es": {
+            "PERSON": 0.864,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "fi": {
+            "PERSON": 0.784,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "fr": {
+            "PERSON": 0.72,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "it": {
+            "PERSON": 0.848,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "nl": {
+            "PERSON": 0.896,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "pl": {
+            "PERSON": 0.976,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "pt": {
+            "PERSON": 1.0,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "sv": {
+            "PERSON": 1.0,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 0.0,
+          "be_national_number": 0.0,
+          "bg_egn": 0.0,
+          "cz_rodne_cislo": 0.0,
+          "de_steuer_id": 0.0,
+          "dk_cpr": 0.1,
+          "ee_isikukood": 0.0,
+          "es_dni": 0.0,
+          "es_nie": 0.0,
+          "fi_hetu": 0.0,
+          "fr_nir": 0.0,
+          "hr_oib": 0.0,
+          "ie_ppsn": 0.0,
+          "it_codice_fiscale": 0.0,
+          "lt_asmens_kodas": 0.0,
+          "lv_personas_kods": 0.0,
+          "nl_bsn": 0.0,
+          "no_fodselsnummer": 0.0,
+          "pl_pesel": 0.0,
+          "pt_cc": 0.0,
+          "ro_cnp": 0.0,
+          "se_personnummer": 0.0,
+          "si_emso": 0.0,
+          "sk_rodne_cislo": 0.0
+        },
+        "recall_by_template": {
+          "0": 0.65,
+          "1": 0.6477777777777778,
+          "2": 0.9666666666666667,
+          "3": 1.0,
+          "4": 0.2577777777777778,
+          "5": 0.48083333333333333,
+          "foreign-0": 0.48
+        },
+        "other_labels": {
+          "DATE_TIME": 2491,
+          "URL": 1106,
+          "NRP": 340,
+          "LOCATION": 223,
+          "MEDICAL_LICENSE": 21
+        }
+      },
+      "seconds": 28.654473372997018,
+      "messages_per_second": 72.41452226288018
+    },
+    "presidio_eu": {
+      "structured": {
+        "micro": {
+          "precision": 0.875710804224208,
+          "recall": 0.5538064516129032,
+          "f1": 0.6785147799317669
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.16891891891891891,
+            "recall": 0.027777777777777776,
+            "f1": 0.04770992366412213,
+            "n_gold": 900,
+            "n_pred": 148,
+            "exact_recall": 0.027777777777777776
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9259259259259259,
+            "recall": 1.0,
+            "f1": 0.9615384615384615,
+            "n_gold": 300,
+            "n_pred": 324,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": 0.211864406779661,
+            "recall": 0.08333333333333333,
+            "f1": 0.11961722488038276,
+            "n_gold": 300,
+            "n_pred": 118,
+            "exact_recall": 0.08333333333333333
+          },
+          "NATIONAL_ID": {
+            "precision": 0.8225806451612904,
+            "recall": 0.3382857142857143,
+            "f1": 0.479413119075218,
+            "n_gold": 875,
+            "n_pred": 372,
+            "exact_recall": 0.33371428571428574
+          }
+        },
+        "coverage": 0.6598709677419354,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.03666666666666667,
+          "DATE": 0.0,
+          "EAN": 0.056666666666666664,
+          "INVOICE": 0.002857142857142857,
+          "ORDER": 0.135,
+          "POSTCODE": 0.0
+        },
+        "negatives_flagged_overall": 0.02515151515151515,
+        "recall_by_language": {
+          "cs": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "da": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.1,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "de": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "en": {
+            "PHONE": 0.3333333333333333,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.12615384615384614,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "es": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "fi": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "fr": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "it": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "nl": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "pl": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "pt": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "sv": {
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 0.0,
+          "be_national_number": 0.0,
+          "bg_egn": 0.0,
+          "cz_rodne_cislo": 0.0,
+          "de_steuer_id": 0.0,
+          "dk_cpr": 0.1,
+          "ee_isikukood": 0.12,
+          "es_dni": 1.0,
+          "es_nie": 1.0,
+          "fi_hetu": 1.0,
+          "fr_nir": 0.0,
+          "hr_oib": 0.84,
+          "ie_ppsn": 0.04,
+          "it_codice_fiscale": 1.0,
+          "lt_asmens_kodas": 0.44,
+          "lv_personas_kods": 0.08,
+          "nl_bsn": 0.0,
+          "no_fodselsnummer": 0.0,
+          "pl_pesel": 1.0,
+          "pt_cc": 0.0,
+          "ro_cnp": 0.08,
+          "se_personnummer": 1.0,
+          "si_emso": 0.0,
+          "sk_rodne_cislo": 0.0
+        },
+        "recall_by_template": {
+          "0": 0.5,
+          "1": 0.715,
+          "2": 1.0,
+          "3": 1.0,
+          "4": 0.08333333333333333,
+          "5": 0.47555555555555556,
+          "foreign-0": 0.14181818181818182
+        },
+        "other_labels": {
+          "PERSON": 2819,
+          "DATE_TIME": 2491,
+          "URL": 1106,
+          "SE_ORGANISATIONSNUMMER": 64,
+          "NRP": 340,
+          "LOCATION": 223,
+          "MEDICAL_LICENSE": 21,
+          "DE_LANR": 9,
+          "DE_TAX_NUMBER": 16
+        }
+      },
+      "person": {
+        "micro": {
+          "precision": 0.5654487406881873,
+          "recall": 0.8963380281690141,
+          "f1": 0.6934434215126122
+        },
+        "labels": {
+          "PERSON": {
+            "precision": 0.5654487406881873,
+            "recall": 0.8963380281690141,
+            "f1": 0.6934434215126122,
+            "n_gold": 1775,
+            "n_pred": 2819,
+            "exact_recall": 0.6805633802816902
+          }
+        },
+        "coverage": 0.8952112676056339,
+        "negatives_flagged": {
+          "AMOUNT": 0.0112,
+          "BAD_ID": 0.07333333333333333,
+          "DATE": 0.04975609756097561,
+          "EAN": 0.13,
+          "INVOICE": 0.037142857142857144,
+          "ORDER": 0.07,
+          "POSTCODE": 0.07666666666666666
+        },
+        "negatives_flagged_overall": 0.05545454545454546,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.8
+          },
+          "da": {
+            "PERSON": 0.872
+          },
+          "de": {
+            "PERSON": 1.0
+          },
+          "en": {
+            "PERSON": 0.9275
+          },
+          "es": {
+            "PERSON": 0.864
+          },
+          "fi": {
+            "PERSON": 0.784
+          },
+          "fr": {
+            "PERSON": 0.72
+          },
+          "it": {
+            "PERSON": 0.848
+          },
+          "nl": {
+            "PERSON": 0.896
+          },
+          "pl": {
+            "PERSON": 0.976
+          },
+          "pt": {
+            "PERSON": 1.0
+          },
+          "sv": {
+            "PERSON": 1.0
+          }
+        },
+        "recall_by_detector": {},
+        "recall_by_template": {
+          "0": 0.95,
+          "1": 0.93,
+          "2": 0.9333333333333333,
+          "4": 0.69,
+          "5": 0.92,
+          "foreign-0": 0.96
+        },
+        "other_labels": {
+          "EMAIL": 900,
+          "DATE_TIME": 2491,
+          "URL": 1106,
+          "SE_ORGANISATIONSNUMMER": 64,
+          "NATIONAL_ID": 372,
+          "VAT_ID": 118,
+          "IBAN": 300,
+          "PAYMENT_CARD": 324,
+          "IP_ADDRESS": 300,
+          "NRP": 340,
+          "PHONE": 148,
+          "LOCATION": 223,
+          "MEDICAL_LICENSE": 21,
+          "DE_LANR": 9,
+          "DE_TAX_NUMBER": 16
+        }
+      },
+      "all": {
+        "micro": {
+          "precision": 0.7100927854572997,
+          "recall": 0.6614159292035399,
+          "f1": 0.6848905508123055
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.16891891891891891,
+            "recall": 0.027777777777777776,
+            "f1": 0.04770992366412213,
+            "n_gold": 900,
+            "n_pred": 148,
+            "exact_recall": 0.027777777777777776
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9259259259259259,
+            "recall": 1.0,
+            "f1": 0.9615384615384615,
+            "n_gold": 300,
+            "n_pred": 324,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": 0.211864406779661,
+            "recall": 0.08333333333333333,
+            "f1": 0.11961722488038276,
+            "n_gold": 300,
+            "n_pred": 118,
+            "exact_recall": 0.08333333333333333
+          },
+          "NATIONAL_ID": {
+            "precision": 0.8225806451612904,
+            "recall": 0.3382857142857143,
+            "f1": 0.479413119075218,
+            "n_gold": 875,
+            "n_pred": 372,
+            "exact_recall": 0.33371428571428574
+          },
+          "PERSON": {
+            "precision": 0.5654487406881873,
+            "recall": 0.8963380281690141,
+            "f1": 0.6934434215126122,
+            "n_gold": 1775,
+            "n_pred": 2819,
+            "exact_recall": 0.6805633802816902
+          }
+        },
+        "coverage": 0.7338053097345133,
+        "negatives_flagged": {
+          "AMOUNT": 0.0112,
+          "BAD_ID": 0.10666666666666667,
+          "DATE": 0.04975609756097561,
+          "EAN": 0.18,
+          "INVOICE": 0.04,
+          "ORDER": 0.195,
+          "POSTCODE": 0.07666666666666666
+        },
+        "negatives_flagged_overall": 0.07848484848484849,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.8,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "da": {
+            "PERSON": 0.872,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.1,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "de": {
+            "PERSON": 1.0,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "en": {
+            "PERSON": 0.9275,
+            "PHONE": 0.3333333333333333,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.12615384615384614,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "es": {
+            "PERSON": 0.864,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "fi": {
+            "PERSON": 0.784,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "fr": {
+            "PERSON": 0.72,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "it": {
+            "PERSON": 0.848,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "nl": {
+            "PERSON": 0.896,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "pl": {
+            "PERSON": 0.976,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "pt": {
+            "PERSON": 1.0,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          },
+          "sv": {
+            "PERSON": 1.0,
+            "PHONE": 0.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 0.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 0.0,
+          "be_national_number": 0.0,
+          "bg_egn": 0.0,
+          "cz_rodne_cislo": 0.0,
+          "de_steuer_id": 0.0,
+          "dk_cpr": 0.1,
+          "ee_isikukood": 0.12,
+          "es_dni": 1.0,
+          "es_nie": 1.0,
+          "fi_hetu": 1.0,
+          "fr_nir": 0.0,
+          "hr_oib": 0.84,
+          "ie_ppsn": 0.04,
+          "it_codice_fiscale": 1.0,
+          "lt_asmens_kodas": 0.44,
+          "lv_personas_kods": 0.08,
+          "nl_bsn": 0.0,
+          "no_fodselsnummer": 0.0,
+          "pl_pesel": 1.0,
+          "pt_cc": 0.0,
+          "ro_cnp": 0.08,
+          "se_personnummer": 1.0,
+          "si_emso": 0.0,
+          "sk_rodne_cislo": 0.0
+        },
+        "recall_by_template": {
+          "0": 0.65,
+          "1": 0.7866666666666666,
+          "2": 0.9666666666666667,
+          "3": 1.0,
+          "4": 0.28555555555555556,
+          "5": 0.5866666666666667,
+          "foreign-0": 0.5509090909090909
+        },
+        "other_labels": {
+          "DATE_TIME": 2491,
+          "URL": 1106,
+          "SE_ORGANISATIONSNUMMER": 64,
+          "NRP": 340,
+          "LOCATION": 223,
+          "MEDICAL_LICENSE": 21,
+          "DE_LANR": 9,
+          "DE_TAX_NUMBER": 16
+        }
+      },
+      "seconds": 32.21465048000391,
+      "messages_per_second": 64.4116875111832
+    },
+    "presidio_plus_europii": {
+      "structured": {
+        "micro": {
+          "precision": 0.9140701071080818,
+          "recall": 0.968,
+          "f1": 0.9402623848483563
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.7620660457239627,
+            "recall": 1.0,
+            "f1": 0.8649687650168189,
+            "n_gold": 900,
+            "n_pred": 1181,
+            "exact_recall": 1.0
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9259259259259259,
+            "recall": 1.0,
+            "f1": 0.9615384615384615,
+            "n_gold": 300,
+            "n_pred": 324,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "NATIONAL_ID": {
+            "precision": 0.9402241594022416,
+            "recall": 0.8582857142857143,
+            "f1": 0.8973884169859727,
+            "n_gold": 875,
+            "n_pred": 803,
+            "exact_recall": 0.8582857142857143
+          }
+        },
+        "coverage": 0.9889032258064516,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.29,
+          "DATE": 0.0,
+          "EAN": 0.013333333333333334,
+          "INVOICE": 0.002857142857142857,
+          "ORDER": 0.105,
+          "POSTCODE": 0.08333333333333333
+        },
+        "negatives_flagged_overall": 0.04818181818181818,
+        "recall_by_language": {
+          "cs": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "da": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.52,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "de": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "en": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "es": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fi": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fr": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "it": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "nl": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pl": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pt": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "sv": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 1.0,
+          "be_national_number": 1.0,
+          "bg_egn": 1.0,
+          "cz_rodne_cislo": 0.5,
+          "de_steuer_id": 0.5,
+          "dk_cpr": 0.52,
+          "ee_isikukood": 1.0,
+          "es_dni": 1.0,
+          "es_nie": 1.0,
+          "fi_hetu": 1.0,
+          "fr_nir": 1.0,
+          "hr_oib": 1.0,
+          "ie_ppsn": 1.0,
+          "it_codice_fiscale": 1.0,
+          "lt_asmens_kodas": 1.0,
+          "lv_personas_kods": 1.0,
+          "nl_bsn": 0.5,
+          "no_fodselsnummer": 1.0,
+          "pl_pesel": 0.5,
+          "pt_cc": 1.0,
+          "ro_cnp": 1.0,
+          "se_personnummer": 1.0,
+          "si_emso": 1.0,
+          "sk_rodne_cislo": 1.0
+        },
+        "recall_by_template": {
+          "0": 1.0,
+          "1": 1.0,
+          "2": 1.0,
+          "3": 1.0,
+          "4": 1.0,
+          "5": 0.8622222222222222,
+          "foreign-0": 1.0
+        },
+        "other_labels": {
+          "PERSON": 2819,
+          "DATE_TIME": 2491,
+          "URL": 1106,
+          "NRP": 340,
+          "LOCATION": 223,
+          "MEDICAL_LICENSE": 21
+        }
+      },
+      "person": {
+        "micro": {
+          "precision": 0.5654487406881873,
+          "recall": 0.8963380281690141,
+          "f1": 0.6934434215126122
+        },
+        "labels": {
+          "PERSON": {
+            "precision": 0.5654487406881873,
+            "recall": 0.8963380281690141,
+            "f1": 0.6934434215126122,
+            "n_gold": 1775,
+            "n_pred": 2819,
+            "exact_recall": 0.6805633802816902
+          }
+        },
+        "coverage": 0.8952112676056339,
+        "negatives_flagged": {
+          "AMOUNT": 0.0112,
+          "BAD_ID": 0.07333333333333333,
+          "DATE": 0.04975609756097561,
+          "EAN": 0.13,
+          "INVOICE": 0.037142857142857144,
+          "ORDER": 0.07,
+          "POSTCODE": 0.07666666666666666
+        },
+        "negatives_flagged_overall": 0.05545454545454546,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.8
+          },
+          "da": {
+            "PERSON": 0.872
+          },
+          "de": {
+            "PERSON": 1.0
+          },
+          "en": {
+            "PERSON": 0.9275
+          },
+          "es": {
+            "PERSON": 0.864
+          },
+          "fi": {
+            "PERSON": 0.784
+          },
+          "fr": {
+            "PERSON": 0.72
+          },
+          "it": {
+            "PERSON": 0.848
+          },
+          "nl": {
+            "PERSON": 0.896
+          },
+          "pl": {
+            "PERSON": 0.976
+          },
+          "pt": {
+            "PERSON": 1.0
+          },
+          "sv": {
+            "PERSON": 1.0
+          }
+        },
+        "recall_by_detector": {},
+        "recall_by_template": {
+          "0": 0.95,
+          "1": 0.93,
+          "2": 0.9333333333333333,
+          "4": 0.69,
+          "5": 0.92,
+          "foreign-0": 0.96
+        },
+        "other_labels": {
+          "EMAIL": 900,
+          "DATE_TIME": 2491,
+          "PHONE": 1181,
+          "URL": 1106,
+          "NATIONAL_ID": 803,
+          "IBAN": 300,
+          "PAYMENT_CARD": 324,
+          "IP_ADDRESS": 300,
+          "NRP": 340,
+          "VAT_ID": 300,
+          "LOCATION": 223,
+          "MEDICAL_LICENSE": 21
+        }
+      },
+      "all": {
+        "micro": {
+          "precision": 0.7721957557384149,
+          "recall": 0.9454867256637168,
+          "f1": 0.8500998811707704
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.7620660457239627,
+            "recall": 1.0,
+            "f1": 0.8649687650168189,
+            "n_gold": 900,
+            "n_pred": 1181,
+            "exact_recall": 1.0
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9259259259259259,
+            "recall": 1.0,
+            "f1": 0.9615384615384615,
+            "n_gold": 300,
+            "n_pred": 324,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "NATIONAL_ID": {
+            "precision": 0.9402241594022416,
+            "recall": 0.8582857142857143,
+            "f1": 0.8973884169859727,
+            "n_gold": 875,
+            "n_pred": 803,
+            "exact_recall": 0.8582857142857143
+          },
+          "PERSON": {
+            "precision": 0.5654487406881873,
+            "recall": 0.8963380281690141,
+            "f1": 0.6934434215126122,
+            "n_gold": 1775,
+            "n_pred": 2819,
+            "exact_recall": 0.6805633802816902
+          }
+        },
+        "coverage": 0.9594690265486726,
+        "negatives_flagged": {
+          "AMOUNT": 0.0112,
+          "BAD_ID": 0.31333333333333335,
+          "DATE": 0.04975609756097561,
+          "EAN": 0.14333333333333334,
+          "INVOICE": 0.04,
+          "ORDER": 0.1725,
+          "POSTCODE": 0.16
+        },
+        "negatives_flagged_overall": 0.09878787878787879,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.8,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "da": {
+            "PERSON": 0.872,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.52,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "de": {
+            "PERSON": 1.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "en": {
+            "PERSON": 0.9275,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "es": {
+            "PERSON": 0.864,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fi": {
+            "PERSON": 0.784,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fr": {
+            "PERSON": 0.72,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "it": {
+            "PERSON": 0.848,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "nl": {
+            "PERSON": 0.896,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pl": {
+            "PERSON": 0.976,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pt": {
+            "PERSON": 1.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "sv": {
+            "PERSON": 1.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 1.0,
+          "be_national_number": 1.0,
+          "bg_egn": 1.0,
+          "cz_rodne_cislo": 0.5,
+          "de_steuer_id": 0.5,
+          "dk_cpr": 0.52,
+          "ee_isikukood": 1.0,
+          "es_dni": 1.0,
+          "es_nie": 1.0,
+          "fi_hetu": 1.0,
+          "fr_nir": 1.0,
+          "hr_oib": 1.0,
+          "ie_ppsn": 1.0,
+          "it_codice_fiscale": 1.0,
+          "lt_asmens_kodas": 1.0,
+          "lv_personas_kods": 1.0,
+          "nl_bsn": 0.5,
+          "no_fodselsnummer": 1.0,
+          "pl_pesel": 0.5,
+          "pt_cc": 1.0,
+          "ro_cnp": 1.0,
+          "se_personnummer": 1.0,
+          "si_emso": 1.0,
+          "sk_rodne_cislo": 1.0
+        },
+        "recall_by_template": {
+          "0": 0.9833333333333333,
+          "1": 0.9766666666666667,
+          "2": 0.9666666666666667,
+          "3": 1.0,
+          "4": 0.8966666666666666,
+          "5": 0.8766666666666667,
+          "foreign-0": 0.98
+        },
+        "other_labels": {
+          "DATE_TIME": 2491,
+          "URL": 1106,
+          "NRP": 340,
+          "LOCATION": 223,
+          "MEDICAL_LICENSE": 21
+        }
+      },
+      "seconds": 35.50141750900366,
+      "messages_per_second": 58.448370391794946
+    },
+    "europii": {
+      "structured": {
+        "micro": {
+          "precision": 0.9544413336726902,
+          "recall": 0.967741935483871,
+          "f1": 0.9610456176319836
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.8506616257088847,
+            "recall": 1.0,
+            "f1": 0.9193054136874361,
+            "n_gold": 900,
+            "n_pred": 1058,
+            "exact_recall": 1.0
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9933774834437086,
+            "recall": 1.0,
+            "f1": 0.9966777408637874,
+            "n_gold": 300,
+            "n_pred": 302,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "NATIONAL_ID": {
+            "precision": 0.9752925877763329,
+            "recall": 0.8571428571428571,
+            "f1": 0.9124087591240876,
+            "n_gold": 875,
+            "n_pred": 769,
+            "exact_recall": 0.8571428571428571
+          }
+        },
+        "coverage": 0.9801290322580645,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.29,
+          "DATE": 0.0,
+          "EAN": 0.006666666666666667,
+          "INVOICE": 0.0,
+          "ORDER": 0.0425,
+          "POSTCODE": 0.08333333333333333
+        },
+        "negatives_flagged_overall": 0.039696969696969696,
+        "recall_by_language": {
+          "cs": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "da": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "de": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "en": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "es": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fi": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fr": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "it": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "nl": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pl": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pt": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "sv": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 1.0,
+          "be_national_number": 1.0,
+          "bg_egn": 1.0,
+          "cz_rodne_cislo": 0.5,
+          "de_steuer_id": 0.5,
+          "dk_cpr": 0.5,
+          "ee_isikukood": 1.0,
+          "es_dni": 1.0,
+          "es_nie": 1.0,
+          "fi_hetu": 1.0,
+          "fr_nir": 1.0,
+          "hr_oib": 1.0,
+          "ie_ppsn": 1.0,
+          "it_codice_fiscale": 1.0,
+          "lt_asmens_kodas": 1.0,
+          "lv_personas_kods": 1.0,
+          "nl_bsn": 0.5,
+          "no_fodselsnummer": 1.0,
+          "pl_pesel": 0.5,
+          "pt_cc": 1.0,
+          "ro_cnp": 1.0,
+          "se_personnummer": 1.0,
+          "si_emso": 1.0,
+          "sk_rodne_cislo": 1.0
+        },
+        "recall_by_template": {
+          "0": 1.0,
+          "1": 1.0,
+          "2": 1.0,
+          "3": 1.0,
+          "4": 1.0,
+          "5": 0.8611111111111112,
+          "foreign-0": 1.0
+        },
+        "other_labels": {}
+      },
+      "person": {
+        "micro": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "labels": {
+          "PERSON": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "n_gold": 1775,
+            "n_pred": 0,
+            "exact_recall": 0.0
+          }
+        },
+        "coverage": 0.0,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.0,
+          "DATE": 0.0,
+          "EAN": 0.0,
+          "INVOICE": 0.0,
+          "ORDER": 0.0,
+          "POSTCODE": 0.0
+        },
+        "negatives_flagged_overall": 0.0,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.0
+          },
+          "da": {
+            "PERSON": 0.0
+          },
+          "de": {
+            "PERSON": 0.0
+          },
+          "en": {
+            "PERSON": 0.0
+          },
+          "es": {
+            "PERSON": 0.0
+          },
+          "fi": {
+            "PERSON": 0.0
+          },
+          "fr": {
+            "PERSON": 0.0
+          },
+          "it": {
+            "PERSON": 0.0
+          },
+          "nl": {
+            "PERSON": 0.0
+          },
+          "pl": {
+            "PERSON": 0.0
+          },
+          "pt": {
+            "PERSON": 0.0
+          },
+          "sv": {
+            "PERSON": 0.0
+          }
+        },
+        "recall_by_detector": {},
+        "recall_by_template": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "foreign-0": 0.0
+        },
+        "other_labels": {
+          "PHONE": 1058,
+          "EMAIL": 900,
+          "NATIONAL_ID": 769,
+          "IBAN": 300,
+          "PAYMENT_CARD": 302,
+          "IP_ADDRESS": 300,
+          "VAT_ID": 300
+        }
+      },
+      "all": {
+        "micro": {
+          "precision": 0.9544413336726902,
+          "recall": 0.6637168141592921,
+          "f1": 0.7829627309740056
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.8506616257088847,
+            "recall": 1.0,
+            "f1": 0.9193054136874361,
+            "n_gold": 900,
+            "n_pred": 1058,
+            "exact_recall": 1.0
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9933774834437086,
+            "recall": 1.0,
+            "f1": 0.9966777408637874,
+            "n_gold": 300,
+            "n_pred": 302,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "NATIONAL_ID": {
+            "precision": 0.9752925877763329,
+            "recall": 0.8571428571428571,
+            "f1": 0.9124087591240876,
+            "n_gold": 875,
+            "n_pred": 769,
+            "exact_recall": 0.8571428571428571
+          },
+          "PERSON": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "n_gold": 1775,
+            "n_pred": 0,
+            "exact_recall": 0.0
+          }
+        },
+        "coverage": 0.672212389380531,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.29,
+          "DATE": 0.0,
+          "EAN": 0.006666666666666667,
+          "INVOICE": 0.0,
+          "ORDER": 0.0425,
+          "POSTCODE": 0.08333333333333333
+        },
+        "negatives_flagged_overall": 0.039696969696969696,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "da": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "de": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "en": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "es": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fi": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fr": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "it": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "nl": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pl": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pt": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "sv": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 1.0,
+          "be_national_number": 1.0,
+          "bg_egn": 1.0,
+          "cz_rodne_cislo": 0.5,
+          "de_steuer_id": 0.5,
+          "dk_cpr": 0.5,
+          "ee_isikukood": 1.0,
+          "es_dni": 1.0,
+          "es_nie": 1.0,
+          "fi_hetu": 1.0,
+          "fr_nir": 1.0,
+          "hr_oib": 1.0,
+          "ie_ppsn": 1.0,
+          "it_codice_fiscale": 1.0,
+          "lt_asmens_kodas": 1.0,
+          "lv_personas_kods": 1.0,
+          "nl_bsn": 0.5,
+          "no_fodselsnummer": 1.0,
+          "pl_pesel": 0.5,
+          "pt_cc": 1.0,
+          "ro_cnp": 1.0,
+          "se_personnummer": 1.0,
+          "si_emso": 1.0,
+          "sk_rodne_cislo": 1.0
+        },
+        "recall_by_template": {
+          "0": 0.6666666666666666,
+          "1": 0.6666666666666666,
+          "2": 0.5,
+          "3": 1.0,
+          "4": 0.6666666666666666,
+          "5": 0.6458333333333334,
+          "foreign-0": 0.5
+        },
+        "other_labels": {}
+      },
+      "seconds": 4.7231742209987715,
+      "messages_per_second": 439.32319726313557
+    },
+    "europii_hint": {
+      "structured": {
+        "micro": {
+          "precision": 0.9831824062095731,
+          "recall": 0.9806451612903225,
+          "f1": 0.9819121447028423
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.9544008483563097,
+            "recall": 1.0,
+            "f1": 0.9766684753119913,
+            "n_gold": 900,
+            "n_pred": 943,
+            "exact_recall": 1.0
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9933774834437086,
+            "recall": 1.0,
+            "f1": 0.9966777408637874,
+            "n_gold": 300,
+            "n_pred": 302,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "NATIONAL_ID": {
+            "precision": 0.975609756097561,
+            "recall": 0.9142857142857143,
+            "f1": 0.9439528023598821,
+            "n_gold": 875,
+            "n_pred": 820,
+            "exact_recall": 0.9142857142857143
+          }
+        },
+        "coverage": 0.9852903225806452,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.09,
+          "DATE": 0.0,
+          "EAN": 0.006666666666666667,
+          "INVOICE": 0.0,
+          "ORDER": 0.045,
+          "POSTCODE": 0.0
+        },
+        "negatives_flagged_overall": 0.014242424242424242,
+        "recall_by_language": {
+          "cs": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "da": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "de": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "en": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "es": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fi": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fr": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "it": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "nl": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pl": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pt": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "sv": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 1.0,
+          "be_national_number": 1.0,
+          "bg_egn": 1.0,
+          "cz_rodne_cislo": 1.0,
+          "de_steuer_id": 0.5,
+          "dk_cpr": 0.5,
+          "ee_isikukood": 1.0,
+          "es_dni": 1.0,
+          "es_nie": 1.0,
+          "fi_hetu": 1.0,
+          "fr_nir": 1.0,
+          "hr_oib": 1.0,
+          "ie_ppsn": 1.0,
+          "it_codice_fiscale": 1.0,
+          "lt_asmens_kodas": 1.0,
+          "lv_personas_kods": 1.0,
+          "nl_bsn": 0.5,
+          "no_fodselsnummer": 1.0,
+          "pl_pesel": 1.0,
+          "pt_cc": 1.0,
+          "ro_cnp": 1.0,
+          "se_personnummer": 1.0,
+          "si_emso": 1.0,
+          "sk_rodne_cislo": 1.0
+        },
+        "recall_by_template": {
+          "0": 1.0,
+          "1": 1.0,
+          "2": 1.0,
+          "3": 1.0,
+          "4": 1.0,
+          "5": 0.9166666666666666,
+          "foreign-0": 1.0
+        },
+        "other_labels": {}
+      },
+      "person": {
+        "micro": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "labels": {
+          "PERSON": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "n_gold": 1775,
+            "n_pred": 0,
+            "exact_recall": 0.0
+          }
+        },
+        "coverage": 0.0,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.0,
+          "DATE": 0.0,
+          "EAN": 0.0,
+          "INVOICE": 0.0,
+          "ORDER": 0.0,
+          "POSTCODE": 0.0
+        },
+        "negatives_flagged_overall": 0.0,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.0
+          },
+          "da": {
+            "PERSON": 0.0
+          },
+          "de": {
+            "PERSON": 0.0
+          },
+          "en": {
+            "PERSON": 0.0
+          },
+          "es": {
+            "PERSON": 0.0
+          },
+          "fi": {
+            "PERSON": 0.0
+          },
+          "fr": {
+            "PERSON": 0.0
+          },
+          "it": {
+            "PERSON": 0.0
+          },
+          "nl": {
+            "PERSON": 0.0
+          },
+          "pl": {
+            "PERSON": 0.0
+          },
+          "pt": {
+            "PERSON": 0.0
+          },
+          "sv": {
+            "PERSON": 0.0
+          }
+        },
+        "recall_by_detector": {},
+        "recall_by_template": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "foreign-0": 0.0
+        },
+        "other_labels": {
+          "PHONE": 943,
+          "EMAIL": 900,
+          "NATIONAL_ID": 820,
+          "IBAN": 300,
+          "PAYMENT_CARD": 302,
+          "IP_ADDRESS": 300,
+          "VAT_ID": 300
+        }
+      },
+      "all": {
+        "micro": {
+          "precision": 0.9831824062095731,
+          "recall": 0.672566371681416,
+          "f1": 0.7987388334209143
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.9544008483563097,
+            "recall": 1.0,
+            "f1": 0.9766684753119913,
+            "n_gold": 900,
+            "n_pred": 943,
+            "exact_recall": 1.0
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9933774834437086,
+            "recall": 1.0,
+            "f1": 0.9966777408637874,
+            "n_gold": 300,
+            "n_pred": 302,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "NATIONAL_ID": {
+            "precision": 0.975609756097561,
+            "recall": 0.9142857142857143,
+            "f1": 0.9439528023598821,
+            "n_gold": 875,
+            "n_pred": 820,
+            "exact_recall": 0.9142857142857143
+          },
+          "PERSON": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "n_gold": 1775,
+            "n_pred": 0,
+            "exact_recall": 0.0
+          }
+        },
+        "coverage": 0.6757522123893805,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.09,
+          "DATE": 0.0,
+          "EAN": 0.006666666666666667,
+          "INVOICE": 0.0,
+          "ORDER": 0.045,
+          "POSTCODE": 0.0
+        },
+        "negatives_flagged_overall": 0.014242424242424242,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "da": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "de": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "en": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "es": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fi": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fr": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "it": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "nl": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.5,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pl": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pt": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "sv": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 1.0,
+          "be_national_number": 1.0,
+          "bg_egn": 1.0,
+          "cz_rodne_cislo": 1.0,
+          "de_steuer_id": 0.5,
+          "dk_cpr": 0.5,
+          "ee_isikukood": 1.0,
+          "es_dni": 1.0,
+          "es_nie": 1.0,
+          "fi_hetu": 1.0,
+          "fr_nir": 1.0,
+          "hr_oib": 1.0,
+          "ie_ppsn": 1.0,
+          "it_codice_fiscale": 1.0,
+          "lt_asmens_kodas": 1.0,
+          "lv_personas_kods": 1.0,
+          "nl_bsn": 0.5,
+          "no_fodselsnummer": 1.0,
+          "pl_pesel": 1.0,
+          "pt_cc": 1.0,
+          "ro_cnp": 1.0,
+          "se_personnummer": 1.0,
+          "si_emso": 1.0,
+          "sk_rodne_cislo": 1.0
+        },
+        "recall_by_template": {
+          "0": 0.6666666666666666,
+          "1": 0.6666666666666666,
+          "2": 0.5,
+          "3": 1.0,
+          "4": 0.6666666666666666,
+          "5": 0.6875,
+          "foreign-0": 0.5
+        },
+        "other_labels": {}
+      },
+      "seconds": 1.4466525560055743,
+      "messages_per_second": 1434.3457877193316
+    },
+    "europii_recall": {
+      "structured": {
+        "micro": {
+          "precision": 0.8636876551568494,
+          "recall": 0.9876129032258064,
+          "f1": 0.9215025282928003
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.6442376521116678,
+            "recall": 1.0,
+            "f1": 0.783630822812364,
+            "n_gold": 900,
+            "n_pred": 1397,
+            "exact_recall": 1.0
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9933774834437086,
+            "recall": 1.0,
+            "f1": 0.9966777408637874,
+            "n_gold": 300,
+            "n_pred": 302,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "NATIONAL_ID": {
+            "precision": 0.8873390557939914,
+            "recall": 0.9451428571428572,
+            "f1": 0.9153292750415053,
+            "n_gold": 875,
+            "n_pred": 932,
+            "exact_recall": 0.9451428571428572
+          }
+        },
+        "coverage": 1.0,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.7,
+          "DATE": 0.0,
+          "EAN": 0.09,
+          "INVOICE": 0.0,
+          "ORDER": 0.735,
+          "POSTCODE": 0.08333333333333333
+        },
+        "negatives_flagged_overall": 0.1684848484848485,
+        "recall_by_language": {
+          "cs": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "da": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.52,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "de": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.52,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "en": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "es": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fi": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fr": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "it": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "nl": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pl": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pt": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "sv": {
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 1.0,
+          "be_national_number": 1.0,
+          "bg_egn": 1.0,
+          "cz_rodne_cislo": 1.0,
+          "de_steuer_id": 0.52,
+          "dk_cpr": 0.52,
+          "ee_isikukood": 1.0,
+          "es_dni": 1.0,
+          "es_nie": 1.0,
+          "fi_hetu": 1.0,
+          "fr_nir": 1.0,
+          "hr_oib": 1.0,
+          "ie_ppsn": 1.0,
+          "it_codice_fiscale": 1.0,
+          "lt_asmens_kodas": 1.0,
+          "lv_personas_kods": 1.0,
+          "nl_bsn": 1.0,
+          "no_fodselsnummer": 1.0,
+          "pl_pesel": 1.0,
+          "pt_cc": 1.0,
+          "ro_cnp": 1.0,
+          "se_personnummer": 1.0,
+          "si_emso": 1.0,
+          "sk_rodne_cislo": 1.0
+        },
+        "recall_by_template": {
+          "0": 1.0,
+          "1": 1.0,
+          "2": 1.0,
+          "3": 1.0,
+          "4": 1.0,
+          "5": 0.9466666666666667,
+          "foreign-0": 1.0
+        },
+        "other_labels": {}
+      },
+      "person": {
+        "micro": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "labels": {
+          "PERSON": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "n_gold": 1775,
+            "n_pred": 0,
+            "exact_recall": 0.0
+          }
+        },
+        "coverage": 0.0,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.0,
+          "DATE": 0.0,
+          "EAN": 0.0,
+          "INVOICE": 0.0,
+          "ORDER": 0.0,
+          "POSTCODE": 0.0
+        },
+        "negatives_flagged_overall": 0.0,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.0
+          },
+          "da": {
+            "PERSON": 0.0
+          },
+          "de": {
+            "PERSON": 0.0
+          },
+          "en": {
+            "PERSON": 0.0
+          },
+          "es": {
+            "PERSON": 0.0
+          },
+          "fi": {
+            "PERSON": 0.0
+          },
+          "fr": {
+            "PERSON": 0.0
+          },
+          "it": {
+            "PERSON": 0.0
+          },
+          "nl": {
+            "PERSON": 0.0
+          },
+          "pl": {
+            "PERSON": 0.0
+          },
+          "pt": {
+            "PERSON": 0.0
+          },
+          "sv": {
+            "PERSON": 0.0
+          }
+        },
+        "recall_by_detector": {},
+        "recall_by_template": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "foreign-0": 0.0
+        },
+        "other_labels": {
+          "PHONE": 1397,
+          "EMAIL": 900,
+          "NATIONAL_ID": 932,
+          "IBAN": 300,
+          "PAYMENT_CARD": 302,
+          "IP_ADDRESS": 300,
+          "VAT_ID": 300
+        }
+      },
+      "all": {
+        "micro": {
+          "precision": 0.8636876551568494,
+          "recall": 0.6773451327433628,
+          "f1": 0.7592500743973813
+        },
+        "labels": {
+          "EMAIL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 900,
+            "n_pred": 900,
+            "exact_recall": 1.0
+          },
+          "PHONE": {
+            "precision": 0.6442376521116678,
+            "recall": 1.0,
+            "f1": 0.783630822812364,
+            "n_gold": 900,
+            "n_pred": 1397,
+            "exact_recall": 1.0
+          },
+          "IBAN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "PAYMENT_CARD": {
+            "precision": 0.9933774834437086,
+            "recall": 1.0,
+            "f1": 0.9966777408637874,
+            "n_gold": 300,
+            "n_pred": 302,
+            "exact_recall": 1.0
+          },
+          "IP_ADDRESS": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "VAT_ID": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "n_gold": 300,
+            "n_pred": 300,
+            "exact_recall": 1.0
+          },
+          "NATIONAL_ID": {
+            "precision": 0.8873390557939914,
+            "recall": 0.9451428571428572,
+            "f1": 0.9153292750415053,
+            "n_gold": 875,
+            "n_pred": 932,
+            "exact_recall": 0.9451428571428572
+          },
+          "PERSON": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "n_gold": 1775,
+            "n_pred": 0,
+            "exact_recall": 0.0
+          }
+        },
+        "coverage": 0.6858407079646017,
+        "negatives_flagged": {
+          "AMOUNT": 0.0,
+          "BAD_ID": 0.7,
+          "DATE": 0.0,
+          "EAN": 0.09,
+          "INVOICE": 0.0,
+          "ORDER": 0.735,
+          "POSTCODE": 0.08333333333333333
+        },
+        "negatives_flagged_overall": 0.1684848484848485,
+        "recall_by_language": {
+          "cs": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "da": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.52,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "de": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 0.52,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "en": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "es": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fi": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "fr": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "it": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "nl": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pl": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "pt": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          },
+          "sv": {
+            "PERSON": 0.0,
+            "PHONE": 1.0,
+            "EMAIL": 1.0,
+            "NATIONAL_ID": 1.0,
+            "IBAN": 1.0,
+            "PAYMENT_CARD": 1.0,
+            "IP_ADDRESS": 1.0,
+            "VAT_ID": 1.0
+          }
+        },
+        "recall_by_detector": {
+          "at_svnr": 1.0,
+          "be_national_number": 1.0,
+          "bg_egn": 1.0,
+          "cz_rodne_cislo": 1.0,
+          "de_steuer_id": 0.52,
+          "dk_cpr": 0.52,
+          "ee_isikukood": 1.0,
+          "es_dni": 1.0,
+          "es_nie": 1.0,
+          "fi_hetu": 1.0,
+          "fr_nir": 1.0,
+          "hr_oib": 1.0,
+          "ie_ppsn": 1.0,
+          "it_codice_fiscale": 1.0,
+          "lt_asmens_kodas": 1.0,
+          "lv_personas_kods": 1.0,
+          "nl_bsn": 1.0,
+          "no_fodselsnummer": 1.0,
+          "pl_pesel": 1.0,
+          "pt_cc": 1.0,
+          "ro_cnp": 1.0,
+          "se_personnummer": 1.0,
+          "si_emso": 1.0,
+          "sk_rodne_cislo": 1.0
+        },
+        "recall_by_template": {
+          "0": 0.6666666666666666,
+          "1": 0.6666666666666666,
+          "2": 0.5,
+          "3": 1.0,
+          "4": 0.6666666666666666,
+          "5": 0.71,
+          "foreign-0": 0.5
+        },
+        "other_labels": {}
+      },
+      "seconds": 4.188263392003137,
+      "messages_per_second": 495.4320695212012
+    }
+  }
+}

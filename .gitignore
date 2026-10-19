@@ -28,3 +28,5 @@ htmlcov/
 .vscode/
 .DS_Store
 /web/model/
+/web/*.whl
+/runs/

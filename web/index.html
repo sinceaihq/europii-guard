@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EuroPII Guard demo</title>
+<meta name="description" content="Find and redact European personal data (national IDs, VAT numbers, IBANs, cards, phones, e-mails) in your browser.">
+<style>
+  :root { --bg:#fbfbfa; --fg:#1d1d1f; --muted:#5f6368; --card:#fff; --line:#e3e3e0; --accent:#1f5fbf;
+          --hl:#fde68a; --hl-fg:#1d1d1f; --warn:#8a5a00; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141416; --fg:#ececec; --muted:#a0a4ab; --card:#1d1e21; --line:#2e3035; --accent:#7fb0ff;
+            --hl:#6b5a17; --hl-fg:#fff7d6; --warn:#e2b04a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width: 900px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size:1.6rem; margin:0 0 4px; }
+  .lede, .note { color:var(--muted); }
+  .note { font-size:.85rem; margin-top:24px; }
+  a { color:var(--accent); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; margin-top:16px; }
+  label { font-weight:600; font-size:.9rem; display:block; margin-bottom:6px; }
+  textarea, select { font:inherit; color:inherit; background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:10px 12px; width:100%; }
+  textarea { min-height:150px; resize:vertical; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.9rem; }
+  .row { display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:12px; }
+  input[type=range] { width:100%; }
+  #status { color:var(--muted); font-size:.9rem; margin:12px 0 0; min-height:1.5em; }
+  .out { white-space: pre-wrap; word-break: break-word; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.9rem;
+         background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:12px; min-height:3em; }
+  mark { background:var(--hl); color:var(--hl-fg); border-radius:3px; padding:0 2px; }
+  table { width:100%; border-collapse: collapse; font-size:.9rem; table-layout: fixed; }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+  th:nth-child(1) { width: 26%; } th:nth-child(2) { width: 34%; } th:nth-child(3) { width: 27%; } th:nth-child(4) { width: 13%; }
+  th { color:var(--muted); font-weight:600; }
+  td.num { font-variant-numeric: tabular-nums; }
+  .warn { color:var(--warn); }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+  .chips button { font:inherit; font-size:.85rem; border:1px solid var(--line); background:var(--bg); color:var(--fg); border-radius:999px; padding:4px 12px; cursor:pointer; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>EuroPII Guard</h1>
+  <p class="lede">Find and redact European personal data — national identity numbers of 22 countries, EU VAT numbers,
+    IBANs, payment cards, phone numbers, e-mail and IP addresses — before text leaves your organisation.
+    This page runs the Python library <strong>in your browser</strong> (Pyodide); nothing you type is uploaded.</p>
+
+  <div class="card">
+    <label for="text">Text</label>
+    <textarea id="text" spellcheck="false">Hei, olen Aino Korhonen. Henkilötunnukseni on 150685A123D ja puhelin 040 123 4567.
+Palkka tilille FI21 1234 5600 0007 85, sähköposti aino.korhonen@example.com.
+Tilaus 4000123456 maksettiin kortilla 4111 1111 1111 1111. PESEL 85461512349.</textarea>
+    <div class="chips" id="examples"></div>
+    <div class="row">
+      <div>
+        <label for="country">Expected country (optional)</label>
+        <select id="country">
+          <option value="">Not specified</option>
+        </select>
+      </div>
+      <div>
+        <label for="threshold">Confidence threshold: <span id="thv">0.50</span></label>
+        <input type="range" id="threshold" min="0.2" max="0.95" step="0.05" value="0.5">
+      </div>
+    </div>
+    <p id="status" role="status">Loading Python runtime…</p>
+  </div>
+
+  <div class="card">
+    <label>Findings</label>
+    <div class="out" id="highlighted"></div>
+    <table id="findings" style="margin-top:12px"><thead><tr><th>Entity</th><th>Value</th><th>Detector</th><th>Score</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="card">
+    <label>Redacted</label>
+    <div class="out" id="redacted"></div>
+  </div>
+
+  <p class="note"><strong class="warn">Privacy assistance, not a guarantee.</strong> EuroPII Guard finds structured
+    identifiers with checksum validation; it does <em>not</em> detect names or addresses on its own and cannot find
+    every piece of personal data. Using it does not make processing GDPR-compliant.
+    Code and evaluation: <a href="https://github.com/sinceaihq/europii-guard">github.com/sinceaihq/europii-guard</a> ·
+    built by <a href="https://sinceai.ai">Since AI</a>.</p>
+</main>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.29.5/full/pyodide.js"></script>
+<script>
+  const COUNTRIES = ["AT","BE","BG","CZ","DE","DK","EE","ES","FI","FR","HR","IE","IT","LT","LV","NL","NO","PL","PT","RO","SE","SI","SK"];
+  const EXAMPLES = {
+    "DE": "Personalakte: Lena Becker, Steuer-ID 65 929 970 489, Gehaltskonto DE89 3704 0044 0532 0130 00, Tel. +49 30 1234567.",
+    "FR": "Dossier : Léa Martin, n° de sécurité sociale 1 06 10 06 067 736 12, tél. 06 12 34 56 78, lea.martin@example.org.",
+    "NL": "Klant Daan de Vries, BSN 553242829, IBAN NL91 ABNA 0417 1643 00, bestelling 2026-0042.",
+    "IT": "Cliente Giulia Rossi, codice fiscale RSSMRA85T10A562S, P. IVA IT00743110157, tel. +39 312 345 6789.",
+    "PL": "Pracownik Piotr Nowak, PESEL 85461512349, konto PL61 1090 1014 0000 0712 1981 2874.",
+  };
+  const $ = (id) => document.getElementById(id);
+  for (const c of COUNTRIES) $("country").add(new Option(c, c));
+  for (const [c, t] of Object.entries(EXAMPLES)) {
+    const b = document.createElement("button"); b.type = "button"; b.textContent = c;
+    b.addEventListener("click", () => { $("text").value = t; $("country").value = c; run(); });
+    $("examples").append(b);
+  }
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  let py = null;
+
+  async function boot() {
+    try {
+      py = await loadPyodide();
+      $("status").textContent = "Installing EuroPII Guard…";
+      await py.loadPackage(["micropip", "ssl"]);  // python-stdnum imports ssl
+      const micropip = py.pyimport("micropip");
+      await micropip.install(["python-stdnum==2.2", "phonenumbers==9.0.41"]);
+      await micropip.install(new URL("europii_guard-0.1.0-py3-none-any.whl", location.href).href);
+      py.runPython(`
+import json
+from europii import scan, redact
+def analyse(text, country, threshold):
+    countries = [country] if country else []
+    findings = scan(text, countries=countries, threshold=threshold)
+    return json.dumps({"findings": [f.to_dict() for f in findings],
+                       "redacted": redact(text, countries=countries, threshold=threshold)})
+`);
+      run();
+    } catch (err) {
+      $("status").textContent = "Could not start the Python runtime: " + err;
+    }
+  }
+
+  function run() {
+    if (!py) return;
+    const th = Number($("threshold").value);
+    $("thv").textContent = th.toFixed(2);
+    const t0 = performance.now();
+    const text = $("text").value;
+    const res = JSON.parse(py.globals.get("analyse")(text, $("country").value, th));
+    const ms = performance.now() - t0;
+    let html = "", pos = 0;
+    for (const f of res.findings) {
+      html += esc(text.slice(pos, f.start)) + `<mark title="${f.entity} (${f.score})">${esc(text.slice(f.start, f.end))}</mark>`;
+      pos = f.end;
+    }
+    $("highlighted").innerHTML = html + esc(text.slice(pos));
+    const tbody = $("findings").querySelector("tbody");
+    tbody.replaceChildren();
+    for (const f of res.findings) {
+      const tr = document.createElement("tr");
+      for (const [v, cls] of [[f.entity], [f.text], [f.detector + (f.country ? ` (${f.country})` : "")], [f.score.toFixed(2), "num"]]) {
+        const td = document.createElement("td"); td.textContent = v; if (cls) td.className = cls; tr.append(td);
+      }
+      tbody.append(tr);
+    }
+    $("redacted").textContent = res.redacted;
+    $("status").textContent = `${res.findings.length} findings · ${ms.toFixed(0)} ms in your browser`;
+  }
+
+  let timer;
+  $("text").addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(run, 200); });
+  $("country").addEventListener("change", run);
+  $("threshold").addEventListener("input", run);
+  boot();
+</script>
+</body>
+</html>

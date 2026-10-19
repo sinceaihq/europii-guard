@@ -1,0 +1,9 @@
+{
+  "seed": 2026,
+  "dev_per_template": 5,
+  "test_per_template": 25,
+  "files": {
+    "dev.jsonl": "89788f925e85ed2caa6c3bfdabd4d1189c861630b61a2b35b81910b57ed1d180",
+    "test.jsonl": "162314f15a7c807719b86af78128ecb551ddb0035dbbce7277a4d7e11e4ca765"
+  }
+}
