@@ -58,9 +58,11 @@ IBAN_LENGTH = {"IE": 22, "FI": 18, "SE": 24, "DE": 22, "FR": 27, "NL": 18, "IT":
                "ES": 24, "PL": 28, "PT": 25, "CZ": 24, "DK": 18}  # fmt: skip
 VAT_BODY = {"IE": "7dL", "FI": "8d", "SE": "10d01", "DE": "9d", "FR": "11d", "NL": "9dB01",
             "IT": "11d", "ES": "L7d1d", "PL": "10d", "PT": "9d", "CZ": "8d", "DK": "8d"}  # fmt: skip
-DATE_FORMATS = {"en": "%d/%m/%Y", "fi": "%-d.%-m.%Y", "sv": "%Y-%m-%d", "de": "%d.%m.%Y",
-                "fr": "%d/%m/%Y", "nl": "%d-%m-%Y", "it": "%d/%m/%Y", "es": "%d/%m/%Y",
-                "pl": "%d.%m.%Y", "pt": "%d/%m/%Y", "cs": "%-d. %-m. %Y", "da": "%d.%m.%Y"}  # fmt: skip
+# Placeholders: {d}/{m} without padding, {dd}/{mm} zero-padded, {Y} year.
+# (strftime's "%-d" is a glibc extension and fails on Windows.)
+DATE_FORMATS = {"en": "{dd}/{mm}/{Y}", "fi": "{d}.{m}.{Y}", "sv": "{Y}-{mm}-{dd}", "de": "{dd}.{mm}.{Y}",
+                "fr": "{dd}/{mm}/{Y}", "nl": "{dd}-{mm}-{Y}", "it": "{dd}/{mm}/{Y}", "es": "{dd}/{mm}/{Y}",
+                "pl": "{dd}.{mm}.{Y}", "pt": "{dd}/{mm}/{Y}", "cs": "{d}. {m}. {Y}", "da": "{dd}.{mm}.{Y}"}  # fmt: skip
 POSTCODES = {"IE": "D02 X285", "FI": "00100", "SE": "114 55", "DE": "10115", "FR": "75001",
              "NL": "1012 AB", "IT": "20121", "ES": "28013", "PL": "00-950", "PT": "1100-148",
              "CZ": "110 00", "DK": "1050"}  # fmt: skip
@@ -165,7 +167,9 @@ def amount(rng: random.Random, lang: str) -> str:
 
 def date(rng: random.Random, lang: str) -> str:
     d = dt.date(2025, 1, 1) + dt.timedelta(days=rng.randint(0, 600))
-    return d.strftime(DATE_FORMATS[lang])
+    return DATE_FORMATS[lang].format(
+        d=d.day, m=d.month, dd=f"{d.day:02d}", mm=f"{d.month:02d}", Y=d.year
+    )
 
 
 def fill(
