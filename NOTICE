@@ -1,0 +1,9 @@
+EuroPII Guard
+Copyright 2026 Since AI ry
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+EuroPII Guard depends on, but does not include:
+* python-stdnum (LGPL-2.1-or-later) — https://arthurdejong.org/python-stdnum/
+* phonenumbers (Apache-2.0), a port of Google's libphonenumber — https://github.com/daviddrysdale/python-phonenumbers
+* optionally Microsoft Presidio (MIT) — https://github.com/microsoft/presidio
