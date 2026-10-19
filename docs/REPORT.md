@@ -16,7 +16,7 @@ On a new synthetic benchmark of <!-- n:start -->
 <!-- n:end --> messages in 12 languages it finds
 European identifiers and contact data far more reliably than Microsoft
 Presidio's default configuration, and combined with Presidio it hides about
-96 % of all annotated personal data including names. It does not detect names
+95 % of all annotated personal data including names. It does not detect names
 or addresses on its own and is not a compliance tool.
 
 ## 1. Problem and users
