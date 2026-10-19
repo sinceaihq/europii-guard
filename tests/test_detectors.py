@@ -184,3 +184,29 @@ def test_documented_example_numbers(text: str, detector: str, value: str) -> Non
 def test_latvian_company_numbers_are_not_personal_codes() -> None:
     for text in ("personas kods 40003521600", "reģ. nr. 40003009497"):
         assert not [f for f in scan(text, countries=["LV"]) if f.entity == "NATIONAL_ID"], text
+
+
+def test_00_prefixed_international_numbers() -> None:
+    assert [f.text for f in scan("Ruf an: 0049 30 12345678") if f.entity == "PHONE"] == [
+        "0049 30 12345678"
+    ]
+    assert [f.text for f in scan("tel. 00358401234567") if f.entity == "PHONE"] == [
+        "00358401234567"
+    ]
+    assert scan("Order 006045764416 was shipped.") == []
+
+
+def test_alternatives_are_bounded_on_both_sides() -> None:
+    from europii.detectors import NATIONAL_DETECTORS
+
+    det = {d.name: d for d in NATIONAL_DETECTORS}
+    assert [m.group() for m in det["nl_bsn"].pattern.finditer("EAN 4006381333931")] == []
+    assert [
+        m.group() for m in det["se_personnummer_compact"].pattern.finditer("ean 04006381333931")
+    ] == []
+    found = scan("Lithuanian personal code 84402155859", countries=["SE"])
+    assert [f.text for f in found] == ["84402155859"]
+
+
+def test_ppsn_with_second_letter_h() -> None:
+    assert [(f.detector, f.text) for f in scan("PPSN: 1234560IH")] == [("ie_ppsn", "1234560IH")]

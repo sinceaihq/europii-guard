@@ -114,7 +114,8 @@ VAT_WORDS = (
 
 # Candidate patterns -------------------------------------------------------------
 def _p(pattern: str, flags: int = 0) -> re.Pattern[str]:
-    return re.compile(rf"(?<![\w@]){pattern}(?![\w@])", flags)
+    # Group the pattern so that both bounds apply to every alternative.
+    return re.compile(rf"(?<![\w@])(?:{pattern})(?![\w@])", flags)
 
 
 EMAIL_RE = re.compile(
@@ -210,9 +211,23 @@ def _phone_finder(text: str, countries: frozenset[str] = frozenset()) -> Iterato
             or THOUSANDS_RE.match(raw)
         ):
             continue
+        if raw.startswith("00"):
+            # "0049 30 ..." is "+49 30 ...", but many order and customer numbers
+            # also start with 00: require grouping after the country code or a label.
+            label = any(
+                re.search(
+                    rf"(?<!\w){re.escape(w)}(?!\w)", text[max(0, start - 60) : start].casefold()
+                )
+                for w in PHONE_WORDS
+            )
+            if not (re.match(r"^00\d{1,3}[ -]\d", raw) or label):
+                continue
+            raw_for_parse = "+" + raw[2:]
+        else:
+            raw_for_parse = raw
         for region in (None,) if international else regions_national:
             try:
-                number = phonenumbers.parse(raw, region)
+                number = phonenumbers.parse(raw_for_parse, region)
             except phonenumbers.NumberParseException:
                 continue
             if phonenumbers.is_valid_number(number):
@@ -295,7 +310,7 @@ NATIONAL_DETECTORS = [
         "Spanish foreigner identity number (NIE)", re.IGNORECASE),
     _id("es_dni", "ES", r"\d{8}-?[A-Z]", es_dni.is_valid, STRONG,
         "Spanish national identity number (DNI)", re.IGNORECASE),
-    _id("ie_ppsn", "IE", r"\d{7}[A-W][ABWTXZ]?", ie_pps.is_valid, STRONG,
+    _id("ie_ppsn", "IE", r"\d{7}[A-W][ABHWTXZ]?", ie_pps.is_valid, STRONG,
         "Irish Personal Public Service Number (PPSN)", re.IGNORECASE),
     _id("pt_cc", "PT", r"\d{8} ?\d ?[A-Z]{2}\d", pt_cc.is_valid, STRONG,
         "Portuguese citizen card number (cartão de cidadão)", re.IGNORECASE),

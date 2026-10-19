@@ -31,7 +31,7 @@ when you also need names and other NLP-based entities.
 ## Install
 
 ```bash
-pip install "europii-guard @ git+https://github.com/sinceaihq/europii-guard@v0.1.2"
+pip install "europii-guard @ git+https://github.com/sinceaihq/europii-guard@v0.1.3"
 ```
 
 ## Use
@@ -85,12 +85,12 @@ recall of the system (EuroPII Guard has no name detector).
 <!-- results:start -->
 | system | precision | recall | F1 | values fully hidden | hard negatives flagged | names found | messages/s |
 |---|---|---|---|---|---|---|---|
-| Presidio (default) | 91.2 | 47.2 | 62.2 | 59.6 | 1.0 | 89.6 | 72 |
-| Presidio + its EU recognizers | 87.6 | 55.4 | 67.9 | 66.0 | 2.5 | 89.6 | 68 |
-| Presidio + EuroPII Guard | 92.8 | 96.8 | 94.7 | 98.3 | 3.7 | 89.6 | 68 |
-| EuroPII Guard | 96.9 | 96.8 | 96.8 | 97.4 | 2.9 | 0.0 | 974 |
-| EuroPII Guard, country hint | 99.3 | 98.1 | 98.7 | 98.1 | 0.8 | 0.0 | 1,569 |
-| EuroPII Guard, threshold 0.25 | 87.6 | 99.4 | 93.1 | 100.0 | 15.7 | 0.0 | 971 |
+| Presidio (default) | 91.2 | 47.2 | 62.2 | 59.6 | 1.0 | 89.6 | 71 |
+| Presidio + its EU recognizers | 87.6 | 55.4 | 67.9 | 66.0 | 2.5 | 89.6 | 69 |
+| Presidio + EuroPII Guard | 92.9 | 96.8 | 94.8 | 98.3 | 3.6 | 89.6 | 66 |
+| EuroPII Guard | 97.0 | 96.8 | 96.9 | 97.4 | 2.8 | 0.0 | 908 |
+| EuroPII Guard, country hint | 99.4 | 98.1 | 98.7 | 98.1 | 0.7 | 0.0 | 1,545 |
+| EuroPII Guard, threshold 0.25 | 88.2 | 99.4 | 93.5 | 100.0 | 14.9 | 0.0 | 946 |
 <!-- results:end -->
 
 Full tables (per entity, per identifier type, hard negatives) are in the

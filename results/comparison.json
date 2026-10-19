@@ -1,7 +1,7 @@
 {
   "data": "/home/sinceai/.claude/jobs/34b2b7af/tmp/pb/data/test.jsonl",
   "messages": 2075,
-  "europii_version": "0.1.1",
+  "europii_version": "0.1.2",
   "python": "3.13.5",
   "systems": {
     "presidio_default": {
@@ -570,8 +570,8 @@
           "MEDICAL_LICENSE": 21
         }
       },
-      "seconds": 28.759875000003376,
-      "messages_per_second": 72.14913138529832
+      "seconds": 29.35647782200249,
+      "messages_per_second": 70.6828664045249
     },
     "presidio_eu": {
       "structured": {
@@ -1149,15 +1149,15 @@
           "DE_TAX_NUMBER": 16
         }
       },
-      "seconds": 30.348442772999988,
-      "messages_per_second": 68.3725361304554
+      "seconds": 30.01585817700834,
+      "messages_per_second": 69.13012407519356
     },
     "presidio_plus_europii": {
       "structured": {
         "micro": {
-          "precision": 0.9276185770750988,
+          "precision": 0.9285361028684471,
           "recall": 0.968,
-          "f1": 0.9473791758194213
+          "f1": 0.9478574609966215
         },
         "labels": {
           "EMAIL": {
@@ -1209,11 +1209,11 @@
             "exact_recall": 1.0
           },
           "NATIONAL_ID": {
-            "precision": 0.9402241594022416,
+            "precision": 0.9449311639549437,
             "recall": 0.8582857142857143,
-            "f1": 0.8973884169859727,
+            "f1": 0.8995267610817705,
             "n_gold": 875,
-            "n_pred": 803,
+            "n_pred": 799,
             "exact_recall": 0.8582857142857143
           }
         },
@@ -1224,10 +1224,10 @@
           "DATE": 0.0,
           "EAN": 0.013333333333333334,
           "INVOICE": 0.002857142857142857,
-          "ORDER": 0.105,
+          "ORDER": 0.095,
           "POSTCODE": 0.08333333333333333
         },
-        "negatives_flagged_overall": 0.03727272727272727,
+        "negatives_flagged_overall": 0.036060606060606064,
         "recall_by_language": {
           "cs": {
             "PHONE": 1.0,
@@ -1461,7 +1461,7 @@
           "DATE_TIME": 2491,
           "PHONE": 1121,
           "URL": 1106,
-          "NATIONAL_ID": 803,
+          "NATIONAL_ID": 799,
           "IBAN": 300,
           "PAYMENT_CARD": 324,
           "IP_ADDRESS": 300,
@@ -1473,9 +1473,9 @@
       },
       "all": {
         "micro": {
-          "precision": 0.7789427697684579,
+          "precision": 0.7793967652630045,
           "recall": 0.9454867256637168,
-          "f1": 0.8541724098534164
+          "f1": 0.8544452995900544
         },
         "labels": {
           "EMAIL": {
@@ -1527,11 +1527,11 @@
             "exact_recall": 1.0
           },
           "NATIONAL_ID": {
-            "precision": 0.9402241594022416,
+            "precision": 0.9449311639549437,
             "recall": 0.8582857142857143,
-            "f1": 0.8973884169859727,
+            "f1": 0.8995267610817705,
             "n_gold": 875,
-            "n_pred": 803,
+            "n_pred": 799,
             "exact_recall": 0.8582857142857143
           },
           "PERSON": {
@@ -1550,10 +1550,10 @@
           "DATE": 0.04975609756097561,
           "EAN": 0.14333333333333334,
           "INVOICE": 0.04,
-          "ORDER": 0.1725,
+          "ORDER": 0.1625,
           "POSTCODE": 0.16
         },
-        "negatives_flagged_overall": 0.08787878787878788,
+        "negatives_flagged_overall": 0.08666666666666667,
         "recall_by_language": {
           "cs": {
             "PERSON": 0.8,
@@ -1719,15 +1719,15 @@
           "MEDICAL_LICENSE": 21
         }
       },
-      "seconds": 30.670009820009,
-      "messages_per_second": 67.65566793676987
+      "seconds": 31.657745717006037,
+      "messages_per_second": 65.54478068491602
     },
     "europii": {
       "structured": {
         "micro": {
-          "precision": 0.9692426983716723,
+          "precision": 0.9702457956015524,
           "recall": 0.967741935483871,
-          "f1": 0.96849173553719
+          "f1": 0.9689922480620154
         },
         "labels": {
           "EMAIL": {
@@ -1779,11 +1779,11 @@
             "exact_recall": 1.0
           },
           "NATIONAL_ID": {
-            "precision": 0.9752925877763329,
+            "precision": 0.9803921568627451,
             "recall": 0.8571428571428571,
-            "f1": 0.9124087591240876,
+            "f1": 0.9146341463414633,
             "n_gold": 875,
-            "n_pred": 769,
+            "n_pred": 765,
             "exact_recall": 0.8571428571428571
           }
         },
@@ -1794,10 +1794,10 @@
           "DATE": 0.0,
           "EAN": 0.006666666666666667,
           "INVOICE": 0.0,
-          "ORDER": 0.0425,
+          "ORDER": 0.0325,
           "POSTCODE": 0.08333333333333333
         },
-        "negatives_flagged_overall": 0.02878787878787879,
+        "negatives_flagged_overall": 0.027575757575757576,
         "recall_by_language": {
           "cs": {
             "PHONE": 1.0,
@@ -2022,7 +2022,7 @@
         "other_labels": {
           "PHONE": 998,
           "EMAIL": 900,
-          "NATIONAL_ID": 769,
+          "NATIONAL_ID": 765,
           "IBAN": 300,
           "PAYMENT_CARD": 302,
           "IP_ADDRESS": 300,
@@ -2031,9 +2031,9 @@
       },
       "all": {
         "micro": {
-          "precision": 0.9692426983716723,
+          "precision": 0.9702457956015524,
           "recall": 0.6637168141592921,
-          "f1": 0.787897888433659
+          "f1": 0.788229111928534
         },
         "labels": {
           "EMAIL": {
@@ -2085,11 +2085,11 @@
             "exact_recall": 1.0
           },
           "NATIONAL_ID": {
-            "precision": 0.9752925877763329,
+            "precision": 0.9803921568627451,
             "recall": 0.8571428571428571,
-            "f1": 0.9124087591240876,
+            "f1": 0.9146341463414633,
             "n_gold": 875,
-            "n_pred": 769,
+            "n_pred": 765,
             "exact_recall": 0.8571428571428571
           },
           "PERSON": {
@@ -2108,10 +2108,10 @@
           "DATE": 0.0,
           "EAN": 0.006666666666666667,
           "INVOICE": 0.0,
-          "ORDER": 0.0425,
+          "ORDER": 0.0325,
           "POSTCODE": 0.08333333333333333
         },
-        "negatives_flagged_overall": 0.02878787878787879,
+        "negatives_flagged_overall": 0.027575757575757576,
         "recall_by_language": {
           "cs": {
             "PERSON": 0.0,
@@ -2271,15 +2271,15 @@
         },
         "other_labels": {}
       },
-      "seconds": 2.1299151800049003,
-      "messages_per_second": 974.2171986375655
+      "seconds": 2.285257265000837,
+      "messages_per_second": 907.9940502887932
     },
     "europii_hint": {
       "structured": {
         "micro": {
-          "precision": 0.9932043910088866,
+          "precision": 0.9942438513867086,
           "recall": 0.9806451612903225,
-          "f1": 0.9868848201532269
+          "f1": 0.9873976874106795
         },
         "labels": {
           "EMAIL": {
@@ -2331,11 +2331,11 @@
             "exact_recall": 1.0
           },
           "NATIONAL_ID": {
-            "precision": 0.975609756097561,
+            "precision": 0.9803921568627451,
             "recall": 0.9142857142857143,
-            "f1": 0.9439528023598821,
+            "f1": 0.9461856889414547,
             "n_gold": 875,
-            "n_pred": 820,
+            "n_pred": 816,
             "exact_recall": 0.9142857142857143
           }
         },
@@ -2346,10 +2346,10 @@
           "DATE": 0.0,
           "EAN": 0.006666666666666667,
           "INVOICE": 0.0,
-          "ORDER": 0.045,
+          "ORDER": 0.035,
           "POSTCODE": 0.0
         },
-        "negatives_flagged_overall": 0.00787878787878788,
+        "negatives_flagged_overall": 0.006666666666666667,
         "recall_by_language": {
           "cs": {
             "PHONE": 1.0,
@@ -2574,7 +2574,7 @@
         "other_labels": {
           "PHONE": 904,
           "EMAIL": 900,
-          "NATIONAL_ID": 820,
+          "NATIONAL_ID": 816,
           "IBAN": 300,
           "PAYMENT_CARD": 302,
           "IP_ADDRESS": 300,
@@ -2583,9 +2583,9 @@
       },
       "all": {
         "micro": {
-          "precision": 0.9932043910088866,
+          "precision": 0.9942438513867086,
           "recall": 0.672566371681416,
-          "f1": 0.8020261713803293
+          "f1": 0.8023648648648648
         },
         "labels": {
           "EMAIL": {
@@ -2637,11 +2637,11 @@
             "exact_recall": 1.0
           },
           "NATIONAL_ID": {
-            "precision": 0.975609756097561,
+            "precision": 0.9803921568627451,
             "recall": 0.9142857142857143,
-            "f1": 0.9439528023598821,
+            "f1": 0.9461856889414547,
             "n_gold": 875,
-            "n_pred": 820,
+            "n_pred": 816,
             "exact_recall": 0.9142857142857143
           },
           "PERSON": {
@@ -2660,10 +2660,10 @@
           "DATE": 0.0,
           "EAN": 0.006666666666666667,
           "INVOICE": 0.0,
-          "ORDER": 0.045,
+          "ORDER": 0.035,
           "POSTCODE": 0.0
         },
-        "negatives_flagged_overall": 0.00787878787878788,
+        "negatives_flagged_overall": 0.006666666666666667,
         "recall_by_language": {
           "cs": {
             "PERSON": 0.0,
@@ -2823,15 +2823,15 @@
         },
         "other_labels": {}
       },
-      "seconds": 1.322866989998147,
-      "messages_per_second": 1568.5628379032323
+      "seconds": 1.3427692459954415,
+      "messages_per_second": 1545.313914649371
     },
     "europii_recall": {
       "structured": {
         "micro": {
-          "precision": 0.8764223941738735,
+          "precision": 0.8820430600091617,
           "recall": 0.9938064516129033,
-          "f1": 0.9314306445761278
+          "f1": 0.9345953161024149
         },
         "labels": {
           "EMAIL": {
@@ -2843,11 +2843,11 @@
             "exact_recall": 1.0
           },
           "PHONE": {
-            "precision": 0.6696428571428571,
+            "precision": 0.6632277081798084,
             "recall": 1.0,
-            "f1": 0.802139037433155,
+            "f1": 0.7975188303057156,
             "n_gold": 900,
-            "n_pred": 1344,
+            "n_pred": 1357,
             "exact_recall": 1.0
           },
           "IBAN": {
@@ -2883,11 +2883,11 @@
             "exact_recall": 1.0
           },
           "NATIONAL_ID": {
-            "precision": 0.8976793248945147,
+            "precision": 0.938257993384785,
             "recall": 0.9725714285714285,
-            "f1": 0.9336258913878223,
+            "f1": 0.9551066217732883,
             "n_gold": 875,
-            "n_pred": 948,
+            "n_pred": 907,
             "exact_recall": 0.9725714285714285
           }
         },
@@ -2896,12 +2896,12 @@
           "AMOUNT": 0.0,
           "BAD_ID": 0.58,
           "DATE": 0.0,
-          "EAN": 0.09,
+          "EAN": 0.006666666666666667,
           "INVOICE": 0.0,
-          "ORDER": 0.7325,
+          "ORDER": 0.725,
           "POSTCODE": 0.08333333333333333
         },
-        "negatives_flagged_overall": 0.1572727272727273,
+        "negatives_flagged_overall": 0.14878787878787877,
         "recall_by_language": {
           "cs": {
             "PHONE": 1.0,
@@ -3124,9 +3124,9 @@
           "foreign-0": 0.0
         },
         "other_labels": {
-          "PHONE": 1344,
+          "PHONE": 1357,
           "EMAIL": 900,
-          "NATIONAL_ID": 948,
+          "NATIONAL_ID": 907,
           "IBAN": 300,
           "PAYMENT_CARD": 302,
           "IP_ADDRESS": 300,
@@ -3135,9 +3135,9 @@
       },
       "all": {
         "micro": {
-          "precision": 0.8764223941738735,
+          "precision": 0.8820430600091617,
           "recall": 0.6815929203539823,
-          "f1": 0.7668259657506968
+          "f1": 0.7689696485623002
         },
         "labels": {
           "EMAIL": {
@@ -3149,11 +3149,11 @@
             "exact_recall": 1.0
           },
           "PHONE": {
-            "precision": 0.6696428571428571,
+            "precision": 0.6632277081798084,
             "recall": 1.0,
-            "f1": 0.802139037433155,
+            "f1": 0.7975188303057156,
             "n_gold": 900,
-            "n_pred": 1344,
+            "n_pred": 1357,
             "exact_recall": 1.0
           },
           "IBAN": {
@@ -3189,11 +3189,11 @@
             "exact_recall": 1.0
           },
           "NATIONAL_ID": {
-            "precision": 0.8976793248945147,
+            "precision": 0.938257993384785,
             "recall": 0.9725714285714285,
-            "f1": 0.9336258913878223,
+            "f1": 0.9551066217732883,
             "n_gold": 875,
-            "n_pred": 948,
+            "n_pred": 907,
             "exact_recall": 0.9725714285714285
           },
           "PERSON": {
@@ -3210,12 +3210,12 @@
           "AMOUNT": 0.0,
           "BAD_ID": 0.58,
           "DATE": 0.0,
-          "EAN": 0.09,
+          "EAN": 0.006666666666666667,
           "INVOICE": 0.0,
-          "ORDER": 0.7325,
+          "ORDER": 0.725,
           "POSTCODE": 0.08333333333333333
         },
-        "negatives_flagged_overall": 0.1572727272727273,
+        "negatives_flagged_overall": 0.14878787878787877,
         "recall_by_language": {
           "cs": {
             "PERSON": 0.0,
@@ -3375,8 +3375,8 @@
         },
         "other_labels": {}
       },
-      "seconds": 2.1376967240066733,
-      "messages_per_second": 970.6708985879151
+      "seconds": 2.1932621510059107,
+      "messages_per_second": 946.0793362290635
     }
   }
 }

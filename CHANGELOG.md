@@ -3,6 +3,19 @@
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.1.3] - 2026-10-19
+
+### Fixed
+- International phone numbers written with `00` (`0049 30 12345678`) were never detected; they are now found when
+  grouped after the country code or next to a phone label (plain `00…` order numbers are still ignored).
+- Candidate patterns with alternatives (Dutch BSN, Swedish personnummer without separator) were bounded only on
+  their first/last alternative, so pieces of longer numbers became candidates — e.g. part of an EAN barcode, or a
+  Lithuanian personal code reported truncated as a Swedish number. All patterns are now bounded on both sides.
+- Irish PPSNs in the 2013 format with second letter `H` were not matched.
+
+These were found while porting the engine to TypeScript for [SafePrompt](https://github.com/sinceaihq/safeprompt).
+Benchmark: structured precision 97.0 % (was 96.9 %), recall unchanged at 96.8 %.
+
 ## [0.1.2] - 2026-10-19
 
 ### Fixed
