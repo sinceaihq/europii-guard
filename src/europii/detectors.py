@@ -171,6 +171,10 @@ MONEY_AFTER_RE = re.compile(
 )
 MONEY_BEFORE_RE = re.compile(r"(?:€|\$|£|kr\.?|eur|sek|dkk)\s*$", re.IGNORECASE)
 IPV4_LIKE_RE = re.compile(r"^\d{1,3}(?:\.\d{1,3}){3}$")
+# "11 987 654", "1.234.567": a number written with thousands separators. Real
+# phone numbers grouped 3-3-3 ("512 345 678") start with a three-digit group.
+THOUSANDS_RE = re.compile(r"^\d{1,2}(?:[ .\u00a0\u202f]\d{3})+$")
+MAX_NATIONAL_DIGITS = 12
 
 
 def _phone_finder(text: str, countries: frozenset[str] = frozenset()) -> Iterator[tuple[int, int]]:
@@ -185,6 +189,8 @@ def _phone_finder(text: str, countries: frozenset[str] = frozenset()) -> Iterato
     regions_national = tuple(sorted(countries)) or COUNTRY_CODES_EU
     for m in PHONE_CANDIDATE_RE.finditer(text):
         raw = m.group(0).rstrip(" .-/(")
+        if raw.count(")") > raw.count("("):  # "(Q2: 11 987 654)" - drop the closing bracket
+            raw = raw.rstrip(")")
         start, end = m.start(), m.start() + len(raw)
         compact = re.sub(r"\D", "", raw)
         international = raw.startswith(("+", "00"))
@@ -197,7 +203,12 @@ def _phone_finder(text: str, countries: frozenset[str] = frozenset()) -> Iterato
         body = raw.split(" ", 1)[1] if international and " " in raw else raw
         if "." in body and " " in body:  # mixed separators: two adjacent tokens, not one number
             continue
-        if not international and (len(compact) < 7 or (raw.isdigit() and len(compact) >= 12)):
+        if not international and (
+            len(compact) < 7
+            or len(compact) > MAX_NATIONAL_DIGITS
+            or (raw.isdigit() and len(compact) >= 12)
+            or THOUSANDS_RE.match(raw)
+        ):
             continue
         for region in (None,) if international else regions_national:
             try:

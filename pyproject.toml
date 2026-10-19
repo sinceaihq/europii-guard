@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "europii-guard"
-version = "0.1.0"
+version = "0.1.1"
 description = "Local detection and redaction of personal data in European text: EU national IDs, VAT numbers, IBANs, cards, phones, e-mails."
 readme = "README.md"
 license = "Apache-2.0"

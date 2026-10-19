@@ -12,7 +12,7 @@ from .core import DEFAULT_THRESHOLD, Detector, Finding, Scanner
 from .detectors import ALL_DETECTORS
 from .redact import redact_findings
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "ALL_DETECTORS",

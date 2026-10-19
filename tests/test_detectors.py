@@ -76,6 +76,8 @@ def test_contact_and_financial(text: str, entity: str, value: str) -> None:
         "EAN 4006381333931, postcode 00100.",
         "IBAN DE89 3704 0044 0532 0130 01 (typo).",  # wrong check digits
         "Card 4111 1111 1111 1112 was declined.",  # fails Luhn
+        "Revenue EUR 12 345 678 (Q2: 11 987 654); shares 98 765 432.",  # thousands separators
+        "SIRET 732 829 320 00074.",  # 14 digits: too long for a national number
     ],
 )
 def test_business_numbers_are_not_pii(text: str) -> None:
@@ -137,3 +139,17 @@ def test_empty_and_unicode_text() -> None:
 def test_detector_names_are_unique() -> None:
     names = [d.name for d in ALL_DETECTORS]
     assert len(names) == len(set(names))
+
+
+@pytest.mark.parametrize(
+    "number",
+    ["512 345 678", "601 123 456", "912 345 678", "040 123 4567", "06 12 34 56 78", "34 41 23 45"],
+)
+def test_national_phone_groupings_are_kept(number: str) -> None:
+    found = [f for f in scan(f"tel. {number}") if f.entity == "PHONE"]
+    assert [f.text for f in found] == [number]
+
+
+def test_phone_span_excludes_closing_bracket() -> None:
+    found = scan("Call me (tel. +358 40 123 4567) tomorrow")
+    assert [f.text for f in found] == ["+358 40 123 4567"]

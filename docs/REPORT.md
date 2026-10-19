@@ -1,6 +1,6 @@
 # EuroPII Guard: checksum-validated detection of European personal data
 
-*Since AI technical report, version 0.1.0 (October 2026)*
+*Since AI technical report, version 0.1.1 (October 2026)*
 
 ## Summary
 
@@ -87,12 +87,12 @@ hard-negative kind that is flagged.
 <!-- main:start -->
 | system | precision | recall | F1 | values fully hidden | hard negatives flagged | names found | messages/s |
 |---|---|---|---|---|---|---|---|
-| Presidio (default) | 91.2 | 47.2 | 62.2 | 59.6 | 1.0 | 89.6 | 72 |
-| Presidio + its EU recognizers | 87.6 | 55.4 | 67.9 | 66.0 | 2.5 | 89.6 | 64 |
-| Presidio + EuroPII Guard | 91.4 | 96.8 | 94.0 | 98.9 | 4.8 | 89.6 | 58 |
-| EuroPII Guard | 95.4 | 96.8 | 96.1 | 98.0 | 4.0 | 0.0 | 439 |
-| EuroPII Guard, country hint | 98.3 | 98.1 | 98.2 | 98.5 | 1.4 | 0.0 | 1,434 |
-| EuroPII Guard, threshold 0.25 | 86.4 | 98.8 | 92.2 | 100.0 | 16.8 | 0.0 | 495 |
+| Presidio (default) | 91.2 | 47.2 | 62.2 | 59.6 | 1.0 | 89.6 | 71 |
+| Presidio + its EU recognizers | 87.6 | 55.4 | 67.9 | 66.0 | 2.5 | 89.6 | 67 |
+| Presidio + EuroPII Guard | 92.8 | 96.8 | 94.7 | 98.3 | 3.7 | 89.6 | 62 |
+| EuroPII Guard | 96.9 | 96.8 | 96.8 | 97.4 | 2.9 | 0.0 | 956 |
+| EuroPII Guard, country hint | 99.3 | 98.1 | 98.7 | 98.1 | 0.8 | 0.0 | 1,580 |
+| EuroPII Guard, threshold 0.25 | 87.6 | 99.4 | 93.1 | 100.0 | 15.8 | 0.0 | 982 |
 <!-- main:end -->
 
 Per entity (precision / recall):
@@ -101,7 +101,7 @@ Per entity (precision / recall):
 | entity | Presidio (default) P / R | Presidio + its EU recognizers P / R | EuroPII Guard P / R | EuroPII Guard, country hint P / R |
 |---|---|---|---|---|
 | e-mail | 100.0 / 100.0 | 100.0 / 100.0 | 100.0 / 100.0 | 100.0 / 100.0 |
-| phone | 16.9 / 2.8 | 16.9 / 2.8 | 85.1 / 100.0 | 95.4 / 100.0 |
+| phone | 16.9 / 2.8 | 16.9 / 2.8 | 90.2 / 100.0 | 99.6 / 100.0 |
 | IBAN | 100.0 / 100.0 | 100.0 / 100.0 | 100.0 / 100.0 | 100.0 / 100.0 |
 | payment card | 92.6 / 100.0 | 92.6 / 100.0 | 99.3 / 100.0 | 99.3 / 100.0 |
 | IP address | 100.0 / 100.0 | 100.0 / 100.0 | 100.0 / 100.0 | 100.0 / 100.0 |
@@ -148,10 +148,10 @@ Hard negatives flagged as personal data:
 |---|---|---|---|---|---|---|---|
 | Presidio (default) | 0.0 | 0.3 | 0.0 | 1.3 | 0.3 | 7.0 | 0.0 |
 | Presidio + its EU recognizers | 0.0 | 3.7 | 0.0 | 5.7 | 0.3 | 13.5 | 0.0 |
-| Presidio + EuroPII Guard | 0.0 | 29.0 | 0.0 | 1.3 | 0.3 | 10.5 | 8.3 |
-| EuroPII Guard | 0.0 | 29.0 | 0.0 | 0.7 | 0.0 | 4.2 | 8.3 |
-| EuroPII Guard, country hint | 0.0 | 9.0 | 0.0 | 0.7 | 0.0 | 4.5 | 0.0 |
-| EuroPII Guard, threshold 0.25 | 0.0 | 70.0 | 0.0 | 9.0 | 0.0 | 73.5 | 8.3 |
+| Presidio + EuroPII Guard | 0.0 | 17.0 | 0.0 | 1.3 | 0.3 | 10.5 | 8.3 |
+| EuroPII Guard | 0.0 | 17.0 | 0.0 | 0.7 | 0.0 | 4.2 | 8.3 |
+| EuroPII Guard, country hint | 0.0 | 2.0 | 0.0 | 0.7 | 0.0 | 4.5 | 0.0 |
+| EuroPII Guard, threshold 0.25 | 0.0 | 58.0 | 0.0 | 9.0 | 0.0 | 73.5 | 8.3 |
 <!-- negatives:end -->
 
 Names (PERSON) found by Presidio's English spaCy pipeline, per message
