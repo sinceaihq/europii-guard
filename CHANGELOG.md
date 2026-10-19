@@ -3,6 +3,20 @@
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.1.2] - 2026-10-19
+
+### Fixed
+- Finnish personal identity codes with the "-" century sign (born
+  1900–1999, e.g. `131052-308T`) were not detected: the separator stripping
+  applied before validation removed the century sign. They are now found.
+  The synthetic benchmark only uses impossible birth dates and so never
+  contained this form; benchmark scores are unchanged.
+- Latvian company registration / VAT numbers (11 digits starting with 4–9)
+  are no longer reported as Latvian personal codes.
+
+### Added
+- Unit tests with documented example identifiers for 12 countries.
+
 ## [0.1.1] - 2026-10-19
 
 ### Fixed

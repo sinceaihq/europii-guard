@@ -262,13 +262,14 @@ def _hetu_ok(compact: str) -> bool:
 
 
 def _lv_personal_ok(compact: str) -> bool:
-    # stdnum.lv.pvn validates both company VAT numbers and personal codes;
-    # personal codes are 11 digits with a valid birth date or the new "32" form.
-    return len(compact) == 11 and bool(lv_pvn.is_valid(compact))
+    # stdnum.lv.pvn validates both company VAT numbers and personal codes.
+    # Company numbers start with 4-9; personal codes start with a day of birth
+    # (0-3) or with "32" (the date-free form issued since 2017).
+    return len(compact) == 11 and compact[0] in "0123" and bool(lv_pvn.is_valid(compact))
 
 
 def _id(name: str, country: str, pattern: str, validator: object, strength: float,
-        description: str, flags: int = 0) -> Detector:  # fmt: skip
+        description: str, flags: int = 0, strip: str = " .-/") -> Detector:  # fmt: skip
     return Detector(
         name=name,
         entity=NATIONAL_ID,
@@ -278,12 +279,14 @@ def _id(name: str, country: str, pattern: str, validator: object, strength: floa
         context=GENERIC_ID_WORDS + COUNTRY_ID_WORDS[country],
         country=country,
         description=description,
+        strip=strip,
     )
 
 
 NATIONAL_DETECTORS = [
     _id("fi_hetu", "FI", r"\d{6}[-+A-FU-Y]\d{3}[0-9A-Y]", _hetu_ok, STRONG,
-        "Finnish personal identity code (henkilötunnus)", re.IGNORECASE),
+        "Finnish personal identity code (henkilötunnus)", re.IGNORECASE,
+        strip=""),  # "-" is the century sign (born 1900-1999), not a separator
     _id("it_codice_fiscale", "IT", r"[A-Z]{6}[0-9LMNPQRSTUV]{2}[A-EHLMPRST][0-9LMNPQRSTUV]{2}[A-Z][0-9LMNPQRSTUV]{3}[A-Z]",
         it_cf.is_valid, STRONG, "Italian tax code (codice fiscale)", re.IGNORECASE),
     _id("fr_nir", "FR", r"[123478] ?\d{2} ?(?:0[1-9]|1[0-2]|[2-9]\d) ?(?:\d{2}|2[AB]) ?\d{3} ?\d{3} ?\d{2}",

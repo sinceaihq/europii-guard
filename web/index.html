@@ -112,7 +112,7 @@ Tilaus 4000123456 maksettiin kortilla 4111 1111 1111 1111. PESEL 85461512349.</t
       await py.loadPackage(["micropip", "ssl"]);  // python-stdnum imports ssl
       const micropip = py.pyimport("micropip");
       await micropip.install(["python-stdnum==2.2", "phonenumbers==9.0.41"]);
-      await micropip.install(new URL("europii_guard-0.1.1-py3-none-any.whl", location.href).href);
+      await micropip.install(new URL("europii_guard-0.1.2-py3-none-any.whl", location.href).href);
       py.runPython(`
 import json
 from europii import scan, redact

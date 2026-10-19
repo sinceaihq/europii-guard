@@ -31,7 +31,7 @@ when you also need names and other NLP-based entities.
 ## Install
 
 ```bash
-pip install "europii-guard @ git+https://github.com/sinceaihq/europii-guard@v0.1.1"
+pip install "europii-guard @ git+https://github.com/sinceaihq/europii-guard@v0.1.2"
 ```
 
 ## Use
@@ -85,17 +85,21 @@ recall of the system (EuroPII Guard has no name detector).
 <!-- results:start -->
 | system | precision | recall | F1 | values fully hidden | hard negatives flagged | names found | messages/s |
 |---|---|---|---|---|---|---|---|
-| Presidio (default) | 91.2 | 47.2 | 62.2 | 59.6 | 1.0 | 89.6 | 71 |
-| Presidio + its EU recognizers | 87.6 | 55.4 | 67.9 | 66.0 | 2.5 | 89.6 | 67 |
-| Presidio + EuroPII Guard | 92.8 | 96.8 | 94.7 | 98.3 | 3.7 | 89.6 | 62 |
-| EuroPII Guard | 96.9 | 96.8 | 96.8 | 97.4 | 2.9 | 0.0 | 956 |
-| EuroPII Guard, country hint | 99.3 | 98.1 | 98.7 | 98.1 | 0.8 | 0.0 | 1,580 |
-| EuroPII Guard, threshold 0.25 | 87.6 | 99.4 | 93.1 | 100.0 | 15.8 | 0.0 | 982 |
+| Presidio (default) | 91.2 | 47.2 | 62.2 | 59.6 | 1.0 | 89.6 | 72 |
+| Presidio + its EU recognizers | 87.6 | 55.4 | 67.9 | 66.0 | 2.5 | 89.6 | 68 |
+| Presidio + EuroPII Guard | 92.8 | 96.8 | 94.7 | 98.3 | 3.7 | 89.6 | 68 |
+| EuroPII Guard | 96.9 | 96.8 | 96.8 | 97.4 | 2.9 | 0.0 | 974 |
+| EuroPII Guard, country hint | 99.3 | 98.1 | 98.7 | 98.1 | 0.8 | 0.0 | 1,569 |
+| EuroPII Guard, threshold 0.25 | 87.6 | 99.4 | 93.1 | 100.0 | 15.7 | 0.0 | 971 |
 <!-- results:end -->
 
 Full tables (per entity, per identifier type, hard negatives) are in the
 [report](docs/REPORT.md). The benchmark is synthetic: real documents are
-messier, so measure on a sample of your own data before relying on it.
+messier, so measure on a sample of your own data before relying on it. Its
+identifiers deliberately use impossible birth dates, so it does not cover every
+real-world form: version 0.1.1 scored the same as 0.1.2 here while missing
+Finnish codes of people born 1900–1999 (fixed in 0.1.2, now unit-tested with
+officially documented example numbers).
 
 ## How it works
 

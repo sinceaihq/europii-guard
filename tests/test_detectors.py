@@ -153,3 +153,34 @@ def test_national_phone_groupings_are_kept(number: str) -> None:
 def test_phone_span_excludes_closing_bracket() -> None:
     found = scan("Call me (tel. +358 40 123 4567) tomorrow")
     assert [f.text for f in found] == ["+358 40 123 4567"]
+
+
+# Example numbers published in official documentation or standard references.
+# The benchmark generator only produces impossible birth dates (to avoid real
+# people), so these cover the century signs and forms it never emits.
+@pytest.mark.parametrize(
+    ("text", "detector", "value"),
+    [
+        ("henkilötunnus 131052-308T", "fi_hetu", "131052-308T"),  # DVV example, born 1952
+        ("hetu 010594Y9032", "fi_hetu", "010594Y9032"),  # 2023 century sign for 1900s
+        ("personnummer 811228-9874", "se_personnummer", "811228-9874"),
+        ("Steuer-ID 86 095 742 719", "de_steuer_id", "86 095 742 719"),
+        ("BSN 111222333", "nl_bsn", "111222333"),
+        ("rijksregisternummer 85.07.30-033.28", "be_national_number", "85.07.30-033.28"),
+        ("codice fiscale RSSMRA85T10A562S", "it_codice_fiscale", "RSSMRA85T10A562S"),
+        ("PESEL 44051401359", "pl_pesel", "44051401359"),
+        ("isikukood 37605030299", "ee_isikukood", "37605030299"),
+        ("personas kods 161175-19997", "lv_personas_kods", "161175-19997"),
+        ("personas kods 32579461005", "lv_personas_kods", "32579461005"),
+        ("ЕГН 7523169263", "bg_egn", "7523169263"),
+        ("DNI 12345678Z", "es_dni", "12345678Z"),
+    ],
+)
+def test_documented_example_numbers(text: str, detector: str, value: str) -> None:
+    found = [f for f in scan(text) if f.entity == "NATIONAL_ID"]
+    assert [(f.detector, f.text) for f in found] == [(detector, value)]
+
+
+def test_latvian_company_numbers_are_not_personal_codes() -> None:
+    for text in ("personas kods 40003521600", "reģ. nr. 40003009497"):
+        assert not [f for f in scan(text, countries=["LV"]) if f.entity == "NATIONAL_ID"], text
